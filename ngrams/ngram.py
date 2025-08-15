@@ -5,11 +5,11 @@ from nltk.util import ngrams
 sample_text = 'I am learning NLP(Natural Language Processing)'
 tokens = word_tokenize(sample_text)
 
-unigrams = list(ngrams, 1)
+unigrams = list(ngrams(tokens, 1))
 print('Unigrams: ', unigrams)
 
-bigrams = list(ngrams, 1)
-print('Bigrams: ', bigrams)
+bigrams = list(ngrams(tokens, 2))
+print('\nBigrams: ', bigrams)
 
-trigrams = list(ngrams, 3)
-print('Trigrams: ', trigrams)
+trigrams = list(ngrams(tokens, 3))
+print('\nTrigrams: ', trigrams)
